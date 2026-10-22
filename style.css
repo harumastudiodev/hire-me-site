@@ -1,0 +1,135 @@
+/* Tablea colors and type for the Hire Me pages. Light by default, espresso dark when the system asks. */
+:root {
+  --surface-0: #f7f2ec;
+  --surface-100: #fffdfa;
+  --line: #e6dacb;
+  --ink: #1f1a16;
+  --ink-muted: #6b5b4d;
+  --brand: #8b5e3c;
+  --brand-tint: #f4eae0;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-0: #15100c;
+    --surface-100: #271f19;
+    --line: #352b23;
+    --ink: #f3ebe1;
+    --ink-muted: #b7a796;
+    --brand: #d2a37a;
+    --brand-tint: #3b2b1f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-0);
+  color: var(--ink);
+  font: 400 16px/1.65 var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 16px 72px;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+.wordmark {
+  font: 500 40px/48px var(--font-display);
+  letter-spacing: -0.5px;
+  margin: 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.tagline {
+  margin: 8px 0 0;
+  color: var(--ink-muted);
+  font-size: 17px;
+}
+
+h1 {
+  font: 500 28px/36px var(--font-display);
+  letter-spacing: -0.25px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font: 600 17px/24px var(--font-sans);
+  margin: 36px 0 8px;
+}
+
+p,
+ul {
+  margin: 0 0 14px;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: var(--brand);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.meta {
+  color: var(--ink-muted);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: var(--surface-100);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.card p:last-child,
+.card ul:last-child {
+  margin-bottom: 0;
+}
+
+.note {
+  background: var(--brand-tint);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+code {
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 0.92em;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-muted);
+  font-size: 14px;
+}
+
+footer a {
+  margin-right: 16px;
+}
